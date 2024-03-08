@@ -6,7 +6,7 @@ Fast install:
 
     pip install morsecode_aj
 
-#Example 
+# Example 
 
 code:: python
 
