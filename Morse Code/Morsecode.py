@@ -82,16 +82,19 @@ def morsecode():
                 flag+=1
             else:
                 print("Invalid choice\nEnter again")
-        rep=input("Do you want to repeat again (yes/no):")
-        rep1=rep.lower()
-        if (rep1=='yes'):
-            print("Request accepted")
-        elif (rep1=='no') :
-            print("Thank you",end="")
-            print("\U0001F600")
-            break
-        else:
-            print("Invalid answer")
+       while True:
+            
+            rep=input("Do you want to repeat again (yes/no):")
+            rep1=rep.lower()
+            if (rep1=='yes'):
+                print("Request accepted")
+                break
+            elif (rep1=='no') :
+                print("Thank you",end="")
+                print("\U0001F600")
+                break
+            else:
+                print("Invalid answer\nEnter again")
 
 morsecode()
 
