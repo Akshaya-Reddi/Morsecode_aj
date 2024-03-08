@@ -16,15 +16,6 @@ Fast install:
 
     pip install morsecode_aj
 
-For a manual install get this package:
-
-::
-
-    wget https://github.com/nikhilkumarsingh/mygmap/archive/master.zip
-    unzip master.zip
-    rm master.zip
-    cd mygmap-master
-
 Install the package:
 
 ::
