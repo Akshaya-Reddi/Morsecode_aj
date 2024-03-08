@@ -82,7 +82,7 @@ def morsecode():
                 flag+=1
             else:
                 print("Invalid choice\nEnter again")
-       while True:
+     while True:
             
             rep=input("Do you want to repeat again (yes/no):")
             rep1=rep.lower()
