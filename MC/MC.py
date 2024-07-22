@@ -1,0 +1,93 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "54e74e8c-2433-4d99-b45e-026875ff28bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import winsound\n",
+    "import time\n",
+    "\n",
+    "# Morse code dictionary\n",
+    "MORSE_CODE_DICT = {\n",
+    "    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', \n",
+    "    'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', \n",
+    "    'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.', \n",
+    "    'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', \n",
+    "    'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--', \n",
+    "    '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..', \n",
+    "    '9': '----.', '0': '-----', ',': '--..--', '.': '.-.-.-', '?': '..--..', \n",
+    "    '/': '-..-.', '-': '-....-', '(': '-.--.', ')': '-.--.-', ' ': ' '\n",
+    "}\n",
+    "\n",
+    "# Reverse dictionary for decoding Morse code\n",
+    "MORSE_CODE_DICT_REVERSED = {value: key for key, value in MORSE_CODE_DICT.items()}\n",
+    "\n",
+    "def text_to_morse(text):\n",
+    "    morse_code = ''\n",
+    "    for char in text.upper():\n",
+    "        if char in MORSE_CODE_DICT:\n",
+    "            morse_code += MORSE_CODE_DICT[char] + ' '\n",
+    "    return morse_code.strip()\n",
+    "\n",
+    "def morse_to_text(morse):\n",
+    "    text = ''\n",
+    "    for code in morse.split(' '):\n",
+    "        if code in MORSE_CODE_DICT_REVERSED:\n",
+    "            text += MORSE_CODE_DICT_REVERSED[code]\n",
+    "    return text\n",
+    "\n",
+    "def beep_morse(morse):\n",
+    "    for symbol in morse:\n",
+    "        if symbol == '.':\n",
+    "            winsound.Beep(1000, 200)  # frequency 1000 Hz, duration 200 ms\n",
+    "        elif symbol == '-':\n",
+    "            winsound.Beep(1000, 600)  # frequency 1000 Hz, duration 600 ms\n",
+    "        elif symbol == ' ':\n",
+    "            time.sleep(0.2)  # gap between words\n",
+    "        time.sleep(0.2)  # gap between symbols\n",
+    "\n",
+    "def main():\n",
+    "    choice = input(\"Do you want to encode or decode Morse code? (e/d): \").lower()\n",
+    "    if choice == 'e':\n",
+    "        text = input(\"Enter the text to encode: \")\n",
+    "        morse_code = text_to_morse(text)\n",
+    "        print(f\"Morse Code: {morse_code}\")\n",
+    "        beep_morse(morse_code)\n",
+    "    elif choice == 'd':\n",
+    "        morse_code = input(\"Enter the Morse code to decode: \")\n",
+    "        text = morse_to_text(morse_code)\n",
+    "        print(f\"Decoded Text: {text}\")\n",
+    "        beep_morse(morse_code)\n",
+    "    else:\n",
+    "        print(\"Invalid choice!\")\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    main()\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
