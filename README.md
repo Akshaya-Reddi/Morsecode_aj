@@ -17,55 +17,55 @@ The Morse Code Translator is a Python script that allows you to convert text to 
 
 ## Installation
 
-You can install the Morse Code Translator via pip:
+-You can install the Morse Code Translator via pip:
 
-\`\`\`sh
-pip install morsecode_aj
-\`\`\`
+
+    pip install morsecode_aj
+
 
 ## Usage
 
-1. Clone the repository:
-   \`\`\`sh
-   git clone https://github.com/Akshaya-Reddi/Morsecode_aj.git
-   cd morsecode_aj
-   \`\`\`
+-1. Clone the repository:
+   
+    git clone https://github.com/Akshaya-Reddi/Morsecode_aj.git
+    cd morsecode_aj
+   
 
-2. Run the script:
-   \`\`\`sh
-   python MC.py
-   \`\`\`
+-2. Run the script:
+   
+    python MC.py
+   
 
-3. Follow the on-screen instructions to encode or decode Morse code.
+-3. Follow the on-screen instructions to encode or decode Morse code.
 
 ## Example
 
 ### Encoding Text to Morse Code:
-\`\`\`plaintext
-Do you want to encode or decode Morse code? (e/d): e
-Enter the text to encode: Hello World
-Morse Code: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
-\`\`\`
+
+-Do you want to encode or decode Morse code? (e/d): e
+-Enter the text to encode: Hello World
+-Morse Code: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+
 
 ### Decoding Morse Code to Text:
-\`\`\`plaintext
-Do you want to encode or decode Morse code? (e/d): d
-Enter the Morse code to decode: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
-Decoded Text: HELLO WORLD
-\`\`\`
+
+-Do you want to encode or decode Morse code? (e/d): d
+-Enter the Morse code to decode: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+-Decoded Text: HELLO WORLD
+
 
 ### Playing Morse Code Beeps:
-After encoding or decoding, the script will play the Morse code beeps corresponding to the text or Morse code provided.
+-After encoding or decoding, the script will play the Morse code beeps corresponding to the text or Morse code provided.
 
 ## License
 
-This project is licensed under the MIT License. See the github.com/Akshaya-Reddi/Morsecode_aj/blob/main/LICENSE file for details.
+-This project is licensed under the MIT License. See the github.com/Akshaya-Reddi/Morsecode_aj/blob/main/LICENSE file for details.
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue to discuss your changes.
+-Contributions are welcome! Please submit a pull request or open an issue to discuss your changes.
 
 ## Author
 
-Akshaya Reddy Anna Reddy
-https://github.com/Akshaya-Reddi/Morsecode_aj
+-Akshaya Reddy Anna Reddy
+-https://github.com/Akshaya-Reddi/Morsecode_aj
