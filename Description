@@ -18,7 +18,7 @@ pip install morsecode_aj
 
 Usage
 Clone the repository:
-git clone https://github.com/yourusername/morsecode_aj.git
+git clone https://github.com/Akshaya-Reddi/Morsecode_aj.git
 cd morsecode_aj
 
 Run the script:
@@ -48,4 +48,5 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 Author
 Akshaya Reddy Anna Reddy
+https://github.com/Akshaya-Reddi/Morsecode_aj
 
