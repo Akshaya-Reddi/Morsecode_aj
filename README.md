@@ -27,7 +27,7 @@ pip install morsecode_aj
 
 1. Clone the repository:
    \`\`\`sh
-   git clone https://github.com/yourusername/morsecode_aj.git
+   git clone https://github.com/Akshaya-Reddi/Morsecode_aj.git
    cd morsecode_aj
    \`\`\`
 
@@ -59,7 +59,7 @@ After encoding or decoding, the script will play the Morse code beeps correspond
 
 ## License
 
-This project is licensed under the MIT License. See the ithub.com/Akshaya-Reddi/Morsecode_aj/blob/main/LICENSE file for details.
+This project is licensed under the MIT License. See the github.com/Akshaya-Reddi/Morsecode_aj/blob/main/LICENSE file for details.
 
 ## Contributing
 
