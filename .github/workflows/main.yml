@@ -1,0 +1,44 @@
+import os
+
+# Define the directory and filename
+workflow_directory = "/mnt/data/morsecode_aj/.github/workflows"
+workflow_filename = os.path.join(workflow_directory, "python-package.yml")
+
+# Ensure the directory exists
+os.makedirs(workflow_directory, exist_ok=True)
+
+# Workflow content
+workflow_content = """
+name: Python package
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
+"""
+
+# Write the workflow content to the file
+with open(workflow_filename, "w") as file:
+    file.write(workflow_content)
+
+workflow_filename
